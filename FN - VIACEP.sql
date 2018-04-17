@@ -11,7 +11,7 @@ IF (EXISTS (SELECT * FROM sysobjects WHERE (id = object_id(N'dbo.fnViaCep')) AND
 	DROP FUNCTION [dbo].[fnViaCep];
 GO
 
-CREATE FUNCTION dbo.fnViaCep(@CEP varchar(10)) 
+CREATE FUNCTION dbo.fnViaCep(@CEP varchar(1000)) 
 RETURNS @T TABLE (
 	cep varchar(10),
 	logradouro varchar(100),
