@@ -1,10 +1,10 @@
 /*
     Author:     Leandro Santiago Gomes
     Referencia: http://viacep.com.br
-    Descrição:  Essa função captura utiliza a mesma regra de negócio que o webservice da ViaCEP. 
+    Descrição:  Essa função utiliza a mesma regra de negócio que o webservice do site ViaCEP. 
                 Para usar essa função é necessário executar o script pelo menos 1 vez. A função 
                 retorna uma tabela de dados conforme o padrão do webservice:
-                -> (cep, logradouro, complemento, localidade, unidade, uf, ibge, gia)
+                -> (cep, logradouro, complemento, bairro, localidade, unidade, uf, ibge, gia)
 
 */
 IF (EXISTS (SELECT * FROM sysobjects WHERE (id = object_id(N'dbo.fnViaCep')) AND (xtype IN (N'FN', N'IF', N'TF'))))
